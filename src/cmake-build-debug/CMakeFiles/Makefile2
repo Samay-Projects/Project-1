@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = "/mnt/c/Users/Samay Magecha/Desktop/Personal Projects/project
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/project_1.dir/all
+all: CMakeFiles/src.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/project_1.dir/clean
+clean: CMakeFiles/src.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/project_1.dir
+# Target rules for target CMakeFiles/src.dir
 
 # All Build rule for target.
-CMakeFiles/project_1.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_1.dir/build.make CMakeFiles/project_1.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_1.dir/build.make CMakeFiles/project_1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/mnt/c/Users/Samay Magecha/Desktop/Personal Projects/project-1/src/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target project_1"
-.PHONY : CMakeFiles/project_1.dir/all
+CMakeFiles/src.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/mnt/c/Users/Samay Magecha/Desktop/Personal Projects/project-1/src/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target src"
+.PHONY : CMakeFiles/src.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/project_1.dir/rule: cmake_check_build_system
+CMakeFiles/src.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Samay Magecha/Desktop/Personal Projects/project-1/src/cmake-build-debug/CMakeFiles" 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/project_1.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/src.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Samay Magecha/Desktop/Personal Projects/project-1/src/cmake-build-debug/CMakeFiles" 0
-.PHONY : CMakeFiles/project_1.dir/rule
+.PHONY : CMakeFiles/src.dir/rule
 
 # Convenience name for target.
-project_1: CMakeFiles/project_1.dir/rule
-.PHONY : project_1
+src: CMakeFiles/src.dir/rule
+.PHONY : src
 
 # clean rule for target.
-CMakeFiles/project_1.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_1.dir/build.make CMakeFiles/project_1.dir/clean
-.PHONY : CMakeFiles/project_1.dir/clean
+CMakeFiles/src.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/clean
+.PHONY : CMakeFiles/src.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
