@@ -1,0 +1,3 @@
+/mnt/c/Users/Samay Magecha/Desktop/Personal Projects/project-1/cmake-build-debug/CMakeFiles/project_1.dir
+/mnt/c/Users/Samay Magecha/Desktop/Personal Projects/project-1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Samay Magecha/Desktop/Personal Projects/project-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
