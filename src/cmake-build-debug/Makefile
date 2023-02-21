@@ -129,29 +129,53 @@ src/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/build
 .PHONY : src/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+classes/main.o: classes/main.cpp.o
+.PHONY : classes/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/main.cpp.o
-.PHONY : main.cpp.o
+classes/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/main.cpp.o
+.PHONY : classes/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+classes/main.i: classes/main.cpp.i
+.PHONY : classes/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/main.cpp.i
-.PHONY : main.cpp.i
+classes/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/main.cpp.i
+.PHONY : classes/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+classes/main.s: classes/main.cpp.s
+.PHONY : classes/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/main.cpp.s
-.PHONY : main.cpp.s
+classes/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/main.cpp.s
+.PHONY : classes/main.cpp.s
+
+classes/object1/BankAccount.o: classes/object1/BankAccount.cpp.o
+.PHONY : classes/object1/BankAccount.o
+
+# target to build an object file
+classes/object1/BankAccount.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/object1/BankAccount.cpp.o
+.PHONY : classes/object1/BankAccount.cpp.o
+
+classes/object1/BankAccount.i: classes/object1/BankAccount.cpp.i
+.PHONY : classes/object1/BankAccount.i
+
+# target to preprocess a source file
+classes/object1/BankAccount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/object1/BankAccount.cpp.i
+.PHONY : classes/object1/BankAccount.cpp.i
+
+classes/object1/BankAccount.s: classes/object1/BankAccount.cpp.s
+.PHONY : classes/object1/BankAccount.s
+
+# target to generate assembly for a file
+classes/object1/BankAccount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/object1/BankAccount.cpp.s
+.PHONY : classes/object1/BankAccount.cpp.s
 
 # Help Target
 help:
@@ -162,9 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... src"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... classes/main.o"
+	@echo "... classes/main.i"
+	@echo "... classes/main.s"
+	@echo "... classes/object1/BankAccount.o"
+	@echo "... classes/object1/BankAccount.i"
+	@echo "... classes/object1/BankAccount.s"
 .PHONY : help
 
 
