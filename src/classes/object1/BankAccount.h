@@ -5,6 +5,7 @@
 #ifndef SRC_BANKACCOUNT_H
 #define SRC_BANKACCOUNT_H
 #define MINIMUM_FEE 50
+#define MAX_QUICK_WITHDRAWAL 10000
 
 class BankAccount {
 private:

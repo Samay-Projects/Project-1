@@ -4,5 +4,6 @@
 using namespace std;
 int main() {
     BankAccount *x = new BankAccount();
+
     return 0;
 }
