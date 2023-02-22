@@ -129,6 +129,54 @@ src/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/build
 .PHONY : src/fast
 
+classes/BankAccount/BankAccount.o: classes/BankAccount/BankAccount.cpp.o
+.PHONY : classes/BankAccount/BankAccount.o
+
+# target to build an object file
+classes/BankAccount/BankAccount.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/BankAccount/BankAccount.cpp.o
+.PHONY : classes/BankAccount/BankAccount.cpp.o
+
+classes/BankAccount/BankAccount.i: classes/BankAccount/BankAccount.cpp.i
+.PHONY : classes/BankAccount/BankAccount.i
+
+# target to preprocess a source file
+classes/BankAccount/BankAccount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/BankAccount/BankAccount.cpp.i
+.PHONY : classes/BankAccount/BankAccount.cpp.i
+
+classes/BankAccount/BankAccount.s: classes/BankAccount/BankAccount.cpp.s
+.PHONY : classes/BankAccount/BankAccount.s
+
+# target to generate assembly for a file
+classes/BankAccount/BankAccount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/BankAccount/BankAccount.cpp.s
+.PHONY : classes/BankAccount/BankAccount.cpp.s
+
+classes/Manipulation/stringmanipulation/StringManipulation.o: classes/Manipulation/stringmanipulation/StringManipulation.cpp.o
+.PHONY : classes/Manipulation/stringmanipulation/StringManipulation.o
+
+# target to build an object file
+classes/Manipulation/stringmanipulation/StringManipulation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/Manipulation/stringmanipulation/StringManipulation.cpp.o
+.PHONY : classes/Manipulation/stringmanipulation/StringManipulation.cpp.o
+
+classes/Manipulation/stringmanipulation/StringManipulation.i: classes/Manipulation/stringmanipulation/StringManipulation.cpp.i
+.PHONY : classes/Manipulation/stringmanipulation/StringManipulation.i
+
+# target to preprocess a source file
+classes/Manipulation/stringmanipulation/StringManipulation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/Manipulation/stringmanipulation/StringManipulation.cpp.i
+.PHONY : classes/Manipulation/stringmanipulation/StringManipulation.cpp.i
+
+classes/Manipulation/stringmanipulation/StringManipulation.s: classes/Manipulation/stringmanipulation/StringManipulation.cpp.s
+.PHONY : classes/Manipulation/stringmanipulation/StringManipulation.s
+
+# target to generate assembly for a file
+classes/Manipulation/stringmanipulation/StringManipulation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/Manipulation/stringmanipulation/StringManipulation.cpp.s
+.PHONY : classes/Manipulation/stringmanipulation/StringManipulation.cpp.s
+
 classes/main.o: classes/main.cpp.o
 .PHONY : classes/main.o
 
@@ -153,30 +201,6 @@ classes/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/main.cpp.s
 .PHONY : classes/main.cpp.s
 
-classes/object1/BankAccount.o: classes/object1/BankAccount.cpp.o
-.PHONY : classes/object1/BankAccount.o
-
-# target to build an object file
-classes/object1/BankAccount.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/object1/BankAccount.cpp.o
-.PHONY : classes/object1/BankAccount.cpp.o
-
-classes/object1/BankAccount.i: classes/object1/BankAccount.cpp.i
-.PHONY : classes/object1/BankAccount.i
-
-# target to preprocess a source file
-classes/object1/BankAccount.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/object1/BankAccount.cpp.i
-.PHONY : classes/object1/BankAccount.cpp.i
-
-classes/object1/BankAccount.s: classes/object1/BankAccount.cpp.s
-.PHONY : classes/object1/BankAccount.s
-
-# target to generate assembly for a file
-classes/object1/BankAccount.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/classes/object1/BankAccount.cpp.s
-.PHONY : classes/object1/BankAccount.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... src"
+	@echo "... classes/BankAccount/BankAccount.o"
+	@echo "... classes/BankAccount/BankAccount.i"
+	@echo "... classes/BankAccount/BankAccount.s"
+	@echo "... classes/Manipulation/stringmanipulation/StringManipulation.o"
+	@echo "... classes/Manipulation/stringmanipulation/StringManipulation.i"
+	@echo "... classes/Manipulation/stringmanipulation/StringManipulation.s"
 	@echo "... classes/main.o"
 	@echo "... classes/main.i"
 	@echo "... classes/main.s"
-	@echo "... classes/object1/BankAccount.o"
-	@echo "... classes/object1/BankAccount.i"
-	@echo "... classes/object1/BankAccount.s"
 .PHONY : help
 
 

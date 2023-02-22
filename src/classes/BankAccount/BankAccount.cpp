@@ -2,37 +2,34 @@
 // Created by Samay Magecha on 21/02/2023.
 //
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include "BankAccount.h"
+#include "../Manipulation/stringmanipulation/StringManipulation.h"
 using namespace std;
 
 BankAccount::BankAccount() {
     balance = 0;
     deposit = 0;
-    cout << "Please enter your deposit! (min: £" << MINIMUM_FEE << ")" << endl;
-    string tempFee;
-    try{
-        cin >> tempFee;
-        setDeposit(stod(tempFee));
-    } catch (exception e) {
-        cout << "Invalid Input, Please try again" << endl;
-    }
+    auto* strman = new StringManipulation();
+    string tempstr;
+    cout << "Minimum Deposit = £" << MINIMUM_FEE << endl << "Maximum Balance = £" << MAX_BALANCE << endl;
         while(getDeposit() < MINIMUM_FEE || getDeposit() > MAX_BALANCE){
-            if (getDeposit() < MINIMUM_FEE)
+            cout << "Please enter your deposit!" << endl;
+            cin >> tempstr;
+            strman->setStr(tempstr);
+            if (!strman->isOnlyDouble())
+                cout << "Your entry is invalid" << endl;
+            else if (stod(tempstr) < MINIMUM_FEE)
                 cout << "Your deposit is too small, please try again!" << endl;
+            else if (stod(tempstr) > MAX_BALANCE)
+                cout << "Your deposit exceeds the maximum allowed balance (£" << MAX_BALANCE << ")" << endl;
             else
-                cout << "Your deposit exceeds the maximum allowed balance (" << MAX_BALANCE << ")" << endl;
-            try {
-                cin >> tempFee;
-            } catch (exception e) {
-                cout << "Invalid Input, Please try again" << endl;
-            }
-            setDeposit(stod(tempFee));
+                setDeposit(stod(tempstr));
         }
-
     setBalance(getDeposit());
     setDeposit(0);
-    cout << "Your account is now open with a balance of £"<< getBalance() << "!" << endl;
+    cout << "Your account is now open with a balance of £"<< fixed << setprecision(2) << getBalance() << "!" << endl;
 }
 
 double BankAccount::getBalance() const {
@@ -74,6 +71,10 @@ void BankAccount::deposit_funds(double val) {
 double BankAccount::check_balance() {
     cout << "Your balance is £" << getBalance() << endl;
     return getBalance();
+}
+
+string BankAccount::getBalanceAsString() {
+    return to_string(getBalance());
 }
 
 
