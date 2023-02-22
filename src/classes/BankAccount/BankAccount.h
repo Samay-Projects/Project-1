@@ -5,24 +5,25 @@
 #ifndef SRC_BANKACCOUNT_H
 #define SRC_BANKACCOUNT_H
 #define MINIMUM_FEE 50
-
+#define MAX_QUICK_WITHDRAWAL 10000
+#define MAX_BALANCE 5000000
+using namespace std;
 class BankAccount {
 private:
     double balance;
     double deposit;
+public:
+    BankAccount();
 private:
     double getDeposit() const;
     void setDeposit(double d);
-
-public:
-    BankAccount();
-
-public:
     double getBalance() const;
     void setBalance(double val);
+
 public:
-    void withdraw_balance(double val);
-    void deposit_balance(double val);
+    void withdraw_funds(double val);
+    void deposit_funds(double val);
+    double check_balance();
 };
 
 
