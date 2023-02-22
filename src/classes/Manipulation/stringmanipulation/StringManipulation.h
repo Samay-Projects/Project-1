@@ -16,6 +16,7 @@ public:
 
 public:
     bool isOnlyDouble();
+    bool isInt();
 };
 
 

@@ -21,3 +21,8 @@ bool StringManipulation::isOnlyDouble() {
         return false;
     return true;
 }
+
+bool StringManipulation::isInt() {
+    string s = getStr();
+    return !s.empty() && s.find_first_not_of("0123456789") == std::string::npos;
+}

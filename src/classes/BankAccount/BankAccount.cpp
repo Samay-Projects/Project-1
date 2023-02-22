@@ -55,7 +55,7 @@ void BankAccount::withdraw_funds(double val) {
         cout << "You have insufficient funds for this withdrawal." << endl;
     } else {
         setBalance(getBalance() - val);
-        cout << "You've successfully withdrawn £" << val << ". You have a total of £" << getBalance() << " remaining." << endl;
+        cout << "You've successfully withdrawn £" << val << ". You have a total of £" << fixed << setprecision(2) << getBalance() << " remaining." << endl;
     }
 }
 
@@ -64,7 +64,7 @@ void BankAccount::deposit_funds(double val) {
         cout << "The amount of money you are attempting to store exceeds the amount you are allowed." << endl;
     } else {
         setBalance(getBalance() + val);
-        cout << "You've successfully deposited £" << val << ", You have a total of £" << getBalance() << "remaining" << endl;
+        cout << "You've successfully deposited £" << val << ", You have a total of £" << fixed << setprecision(2) << getBalance() << " remaining" << endl;
     }
 }
 
@@ -73,8 +73,5 @@ double BankAccount::check_balance() {
     return getBalance();
 }
 
-string BankAccount::getBalanceAsString() {
-    return to_string(getBalance());
-}
 
 

@@ -19,7 +19,6 @@ private:
     void setDeposit(double d);
     double getBalance() const;
     void setBalance(double val);
-    string getBalanceAsString();
 
 public:
     void withdraw_funds(double val);
