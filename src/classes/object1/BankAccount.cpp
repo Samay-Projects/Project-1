@@ -38,19 +38,29 @@ void BankAccount::setDeposit(double d) {
     BankAccount::deposit = d;
 }
 
-void BankAccount::withdraw_balance(double val) {
+void BankAccount::withdraw_funds(double val) {
     if (val > MAX_QUICK_WITHDRAWAL){
-        cout << "You are attempting to draw more than you are allowed to withdraw in one transaction" << endl;
+        cout << "You are attempting to draw more than you are allowed to withdraw in one transaction." << endl;
     } else if (getBalance() > val) {
-        cout << "You have insufficient funds for this withdrawal" << endl;
+        cout << "You have insufficient funds for this withdrawal." << endl;
     } else {
         setBalance(getBalance() - val);
-        cout << "You've successfully withdrawn £" << val << endl;
+        cout << "You've successfully withdrawn £" << val << ". You have a total of £" << getBalance() << " remaining." << endl;
     }
 }
 
-void BankAccount::deposit_balance(double val) {
+void BankAccount::deposit_funds(double val) {
+    if (getBalance() + val > MAX_BALANCE){
+        cout << "The amount of money you are attempting to store exceeds the amount you are allowed." << endl;
+    } else {
+        setBalance(getBalance() + val);
+        cout << "You've successfully deposited £" << val << ", You have a total of £" << getBalance() << "remaining" << endl;
+    }
+}
 
+double BankAccount::check_balance() {
+    cout << "Your balance is £" << getBalance() << endl;
+    return getBalance();
 }
 
 
