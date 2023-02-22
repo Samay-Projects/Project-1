@@ -2,6 +2,7 @@
 // Created by Samay Magecha on 21/02/2023.
 //
 #include <iostream>
+#include <string>
 #include "BankAccount.h"
 using namespace std;
 
@@ -9,14 +10,26 @@ BankAccount::BankAccount() {
     balance = 0;
     deposit = 0;
     cout << "Please enter your deposit! (min: £" << MINIMUM_FEE << ")" << endl;
-    double tempFee;
-    cin >> tempFee;
-    setDeposit(tempFee);
-    while(getDeposit() < MINIMUM_FEE){
-        cout << "Your deposit is too small, please try again!" << endl;
+    string tempFee;
+    try{
         cin >> tempFee;
-        setDeposit(tempFee);
+        setDeposit(stod(tempFee));
+    } catch (exception e) {
+        cout << "Invalid Input, Please try again" << endl;
     }
+        while(getDeposit() < MINIMUM_FEE || getDeposit() > MAX_BALANCE){
+            if (getDeposit() < MINIMUM_FEE)
+                cout << "Your deposit is too small, please try again!" << endl;
+            else
+                cout << "Your deposit exceeds the maximum allowed balance (" << MAX_BALANCE << ")" << endl;
+            try {
+                cin >> tempFee;
+            } catch (exception e) {
+                cout << "Invalid Input, Please try again" << endl;
+            }
+            setDeposit(stod(tempFee));
+        }
+
     setBalance(getDeposit());
     setDeposit(0);
     cout << "Your account is now open with a balance of £"<< getBalance() << "!" << endl;
@@ -41,7 +54,7 @@ void BankAccount::setDeposit(double d) {
 void BankAccount::withdraw_funds(double val) {
     if (val > MAX_QUICK_WITHDRAWAL){
         cout << "You are attempting to draw more than you are allowed to withdraw in one transaction." << endl;
-    } else if (getBalance() > val) {
+    } else if (getBalance() < val) {
         cout << "You have insufficient funds for this withdrawal." << endl;
     } else {
         setBalance(getBalance() - val);
